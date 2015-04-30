@@ -1,0 +1,8 @@
+<ul class="nav nav-list nav-pills nav-stacked abn-tree">
+    <li ng-repeat="row in treeRows | filter:{visible:true}" ng-animate="'abn-tree-animate'" ng-class="'level-' + {{ row.level }}" class="abn-tree-row">
+        <a ng-click="">
+            <i ng-class="row.icon" ng-click="showChildren(row.id, row.level)" class="indented tree-icon"> </i>
+            <span class="indented tree-label">{{ row.label }} </span>
+        </a>
+    </li>
+</ul>
